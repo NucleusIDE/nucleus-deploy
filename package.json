@@ -6,8 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin": {"nucleus": "./bin/nucleus"},
+  "bin": {
+    "nucleus": "./bin/nucleus"
+  },
   "dependencies": {
+    "cjson": "^0.3.0",
     "commander": "latest",
     "nodemiral": "0.3.x"
   },
