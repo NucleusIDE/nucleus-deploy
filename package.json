@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin": "bin/nuc-deploy",
+  "bin": {"nucleus": "./bin/nucleus"},
+  "dependencies": {
+    "commander": "latest",
+    "nodemiral": "0.3.x"
+  },
   "keywords": [
     "nucleus",
     "deploy",
