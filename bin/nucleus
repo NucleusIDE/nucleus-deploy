@@ -2,11 +2,10 @@
 
 var cli = require("commander"),
     path = require("path"),
-    args = process.argv.filter(function(a) {return !!a;}),
-    fs = require("fs"),
-    path = require("path");
+    actions = require("../lib/actions"),
+    args = process.argv.filter(function(a) {return !!a;});
 
-var actions = ['init', 'setup', 'deploy', 'run'];
+var should_be_actions = ['init', 'setup', 'deploy', 'run'];
 
 cli
   .version('0.0.1')
@@ -20,24 +19,5 @@ if(! (cli.init || cli.setup || cli.deploy || cli.run)){
   cli.help();
 }
 
-if (cli.init) {
-  (function() {
-    var destNucJson = path.resolve('nucleus.json');
-
-    if(fs.existsSync(destNucJson)) {
-      console.error('A Project Already Exists'.bold.red);
-      process.exit(1);
-    }
-
-    var sampleNucJson = path.resolve(__dirname, '../sample/nucleus.json');
-
-    copyFile(sampleNucJson, destNucJson);
-
-    console.log('Empty Project Initialized!'.bold.green);
-
-    function copyFile(src, dest) {
-      var content = fs.readFileSync(src, 'utf8');
-      fs.writeFileSync(dest, content);
-    }
-  })();
-}
+if (cli.init)
+  actions.init();
