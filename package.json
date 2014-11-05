@@ -1,0 +1,17 @@
+{
+  "name": "nuc-deploy",
+  "version": "0.0.1",
+  "description": "Deploy development meteor apps optimised for Nucleus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "bin/nuc-deploy",
+  "keywords": [
+    "nucleus",
+    "deploy",
+    "meteor"
+  ],
+  "author": "ckhabra@gmail.com (https://channikhabra.github.io/)",
+  "license": "MIT"
+}
