@@ -21,3 +21,6 @@ if(! (cli.init || cli.setup || cli.deploy || cli.run)){
 
 if (cli.init)
   actions.init();
+
+if (cli.setup)
+  actions.setup();

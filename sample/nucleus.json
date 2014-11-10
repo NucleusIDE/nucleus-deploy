@@ -25,6 +25,5 @@
   // Configure environment
   "env": {
     "ROOT_URL": "http://myapp.com"
-  },
-
+  }
 }
